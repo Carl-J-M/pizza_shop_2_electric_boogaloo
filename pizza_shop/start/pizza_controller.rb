@@ -30,7 +30,7 @@ end
 post '/pizza_orders/:id/update' do
   @order = PizzaOrder.new(params)
   @order.update()
-  redirect "/pizza_orders"
+  redirect "/pizza_orders/#{@order.id}"
 end
 
 get '/pizza_orders/:id/edit' do
